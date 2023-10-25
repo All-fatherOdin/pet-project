@@ -1,8 +1,6 @@
+function MainPage() {
 
-
-function MainPage(){
-
-  return(
+  return (
     <div>
       MAIN_PAGE
     </div>
