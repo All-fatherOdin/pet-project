@@ -1,0 +1,13 @@
+.NavLink {
+  color: var(--secondary-color);
+  text-decoration: none;
+
+  &:hover {
+    text-shadow: 0 0 1px var(--secondary-color);
+  };
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

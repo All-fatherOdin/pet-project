@@ -1,0 +1,21 @@
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--primary-color);
+  box-shadow: var(--primary-shadow);
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px
+}
+
+.menuButton {
+
+}
