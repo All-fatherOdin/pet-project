@@ -1,7 +1,6 @@
 import {MainPage} from "pages/MainPage"
 import {AboutPage} from "pages/AboutPage"
 
-
 export enum AppRoutes {
   MAIN = "main",
   ABOUT = "about"
@@ -12,14 +11,13 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ABOUT]: "/about"
 }
 
-
 export const routeConfig = [
   {
     path: RoutePath.main,
-    element: <MainPage/>,
+    element: <MainPage/>
   },
   {
     path: RoutePath.about,
-    element: <AboutPage/>,
-  },
+    element: <AboutPage/>
+  }
 ]

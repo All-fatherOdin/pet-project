@@ -1,7 +1,5 @@
 declare module "*.scss" {
-  interface ICassNames {
-    [className: string]: string
-  }
+  type ICassNames = Record<string, string>
 
   const className: ICassNames
   export = className

@@ -1,12 +1,10 @@
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import webpack, {HotModuleReplacementPlugin} from "webpack"
-import {BuildOptions,} from "./types/config"
+import {type BuildOptions} from "./types/config"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin"
 
-
-
-export function buildPlugins({paths,isDev}:BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins ({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
   const plugins = [
     new HtmlWebpackPlugin({
       template: paths.html
@@ -15,9 +13,9 @@ export function buildPlugins({paths,isDev}:BuildOptions): webpack.WebpackPluginI
     new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash:8].css",
       chunkFilename: "css/[name].[contenthash:8].css"
-    }),
+    })
   ]
-  if(isDev){
+  if (isDev) {
     plugins.push(new ReactRefreshWebpackPlugin())
     plugins.push(new HotModuleReplacementPlugin())
   }

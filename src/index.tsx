@@ -6,7 +6,7 @@ import {LocalesProvider} from "app/providers/LocalesProvider"
 
 const container = document.getElementById("root")
 
-const root = createRoot(container)
+const root = createRoot(container as HTMLElement)
 root.render(
   <BrowserRouter>
     <ThemeProvider>
@@ -15,4 +15,4 @@ root.render(
       </LocalesProvider>
     </ThemeProvider>
   </BrowserRouter>
- )
+)

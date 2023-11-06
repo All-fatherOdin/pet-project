@@ -1,8 +1,7 @@
-import React, {ButtonHTMLAttributes} from "react"
+import React, {type ButtonHTMLAttributes} from "react"
 import {classNames} from "helpers/classNames/classNames"
 import classes from "./Button.module.scss"
-import {Color} from "app/providers/ThemeProvider/index"
-
+import {type Color} from "app/providers/ThemeProvider/index"
 
 export enum VariantButton {
   OUTLINED = "outlined",
@@ -15,13 +14,11 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: Color
 }
 
-
-export function Button({className, children,color, variant, ...otherProps}: ButtonProps) {
-
+export function Button ({className, children, color, variant, ...otherProps}: ButtonProps) {
   return (
     <button className={classNames(classes.Button, {}, [
       variant && classes[variant],
-      color && classes[color],className])}{...otherProps}>
+      color && classes[color], className])}{...otherProps}>
       {children}
     </button>
   )

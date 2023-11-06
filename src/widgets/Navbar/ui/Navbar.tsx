@@ -3,12 +3,11 @@ import {classNames} from "helpers/classNames/classNames"
 import {NavLink} from "shared/NavLink/ui/NavLink"
 import {FormattedMessage} from "react-intl"
 
-
 interface NavbarProps {
   className?: string
 }
 
-export function Navbar({className}: NavbarProps) {
+export function Navbar ({className}: NavbarProps) {
   return (
     <div className={classNames(classes.navbar, {}, [className])}>
       <div>

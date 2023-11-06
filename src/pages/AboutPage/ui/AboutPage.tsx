@@ -1,9 +1,8 @@
 import {useIntl} from "react-intl"
 
-
-function AboutPage(){
+function AboutPage () {
   const intl = useIntl()
-  return(
+  return (
     <div>
       {intl.formatMessage({id: "About"})}
     </div>

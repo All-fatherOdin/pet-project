@@ -10,8 +10,7 @@ interface LocaleSwitcherProps {
   className?: string
 }
 
-
-export function LocaleSwitcher({className}: LocaleSwitcherProps) {
+export function LocaleSwitcher ({className}: LocaleSwitcherProps) {
   const {locale, setLocale} = useLocales()
 
   const toggleLocale = () => {
