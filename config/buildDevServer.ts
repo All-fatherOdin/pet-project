@@ -6,9 +6,7 @@ export function buildDevServer({port,paths}:BuildOptions):DevServerConfiguration
   return {
     port,
     historyApiFallback: true,
-    // static: {
-    //   directory: paths.devServer,
-    // },
-    open: true
+    open: true,
+    hot: true
   }
 }

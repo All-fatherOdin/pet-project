@@ -1,25 +1,27 @@
 import React, {ButtonHTMLAttributes} from "react"
 import {classNames} from "helpers/classNames/classNames"
 import classes from "./Button.module.scss"
-import {Color} from "shared/config/themeConfig/themeConfig"
+import {Color} from "app/providers/ThemeProvider/index"
 
 
-export enum ThemeButton {
+export enum VariantButton {
   OUTLINED = "outlined",
   CONTAINED = "contained",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
-  theme?: ThemeButton
+  variant?: VariantButton
   color?: Color
 }
 
 
-export function Button({className, children,color, theme, ...otherProps}: ButtonProps) {
+export function Button({className, children,color, variant, ...otherProps}: ButtonProps) {
 
   return (
-    <button className={classNames(classes.Button, {}, [className,classes[theme],classes[color]])}{...otherProps}>
+    <button className={classNames(classes.Button, {}, [
+      variant && classes[variant],
+      color && classes[color],className])}{...otherProps}>
       {children}
     </button>
   )

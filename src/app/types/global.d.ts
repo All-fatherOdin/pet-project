@@ -7,6 +7,7 @@ declare module "*.scss" {
   export = className
 }
 
+declare module "*.json"
 declare module "*.png"
 declare module "*.jpg"
 declare module "*.jpeg"

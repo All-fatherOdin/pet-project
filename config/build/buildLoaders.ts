@@ -1,6 +1,7 @@
 import webpack from "webpack"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import {BuildOptions} from "./types/config"
+import {transform} from "@formatjs/ts-transformer"
 
 
 export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
@@ -18,7 +19,20 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
 
   const tsLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+    use: [{
+      loader: 'ts-loader',
+      options: {
+        getCustomTransformers() {
+          return {
+            before: [
+              transform({
+                overrideIdFn: '[sha512:contenthash:base64:6]',
+              }),
+            ],
+          }
+        },
+      },
+    },],
     exclude: /node_modules/,
   }
 

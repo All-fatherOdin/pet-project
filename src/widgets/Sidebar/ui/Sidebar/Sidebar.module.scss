@@ -1,0 +1,16 @@
+.Sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--primary-color);
+  transition: width 0.3s;
+  position: fixed;
+  box-shadow: var(--primary-shadow);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.close {
+  width: var(--sidebar-width-closed);
+}

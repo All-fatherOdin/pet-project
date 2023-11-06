@@ -1,6 +1,6 @@
 type Modes = Record<string, boolean | string>
 
-export function classNames(cls: string, modes: Modes ={}, additional: string[] = []): string {
+export function classNames(cls: string, modes: Modes ={}, additional: (string | undefined)[] = []): string {
 
   return [
     cls,

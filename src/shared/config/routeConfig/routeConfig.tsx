@@ -1,4 +1,3 @@
-import {RouteProps} from "react-router-dom"
 import {MainPage} from "pages/MainPage"
 import {AboutPage} from "pages/AboutPage"
 
@@ -13,15 +12,14 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ABOUT]: "/about"
 }
 
-export const routeConfig: RouteProps[] = [
+
+export const routeConfig = [
   {
     path: RoutePath.main,
     element: <MainPage/>,
-
   },
   {
     path: RoutePath.about,
     element: <AboutPage/>,
-
   },
 ]

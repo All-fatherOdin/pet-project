@@ -1,8 +1,11 @@
-function MainPage() {
+import {useIntl} from "react-intl"
 
+
+function MainPage() {
+  const intl = useIntl()
   return (
     <div>
-      MAIN_PAGE
+      {intl.formatMessage({id: "Main"})}
     </div>
   )
 }

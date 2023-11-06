@@ -1,9 +1,11 @@
+import {useIntl} from "react-intl"
+
 
 function AboutPage(){
-
+  const intl = useIntl()
   return(
     <div>
-      ABOUT_PAGE
+      {intl.formatMessage({id: "About"})}
     </div>
   )
 }
