@@ -4,8 +4,8 @@ export function classNames (cls: string, modes: Modes = {}, additional: Array<st
   return [
     cls,
     ...additional.filter(el => !!el),
-    Object.entries(modes)
+    ...Object.entries(modes)
       .filter(([_, value]) => Boolean(value))
       .map(([cls, _]) => cls)
-  ].join(" ")
+  ].join(" ").trim()
 }
