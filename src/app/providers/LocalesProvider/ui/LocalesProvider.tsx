@@ -5,7 +5,7 @@ import {DEFAULT_LOCALE, LOCAL_STORAGE_LOCALE_KEY, type Locales} from "shared/con
 import lang from "../../../../../public/lang/lang.json"
 
 export function LocalesProvider ({children}: React.PropsWithChildren) {
-  const defaultLocale = (localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) || DEFAULT_LOCALE) as Locales
+  const defaultLocale = (localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) ?? DEFAULT_LOCALE) as Locales
   const [locale, _setLocale] = useState<Locales>(defaultLocale)
   const [messages, _setMessages] = useState<Record<string, string>>(lang[locale])
   function setLocale (locale: Locales) {

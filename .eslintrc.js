@@ -17,7 +17,8 @@ module.exports = {
     },
     plugins: [
         "react",
-        '@typescript-eslint'
+        "@typescript-eslint",
+        "formatjs"
     ],
     rules: {
         "@typescript-eslint/quotes": ["error", "double"],
@@ -26,6 +27,12 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "operator-linebreak": ["error", "after"],
         "@typescript-eslint/strict-boolean-expressions": "off",
-        "@typescript-eslint/prefer-nullish-coalescing": "warn"
+        "@typescript-eslint/prefer-nullish-coalescing": "warn",
+        "formatjs/no-offset": "error",
+        "formatjs/no-literal-string-in-jsx": ["warn",{
+            exclude: [
+              ["...","message"]
+            ]
+        }]
     }
 }
