@@ -7,29 +7,3 @@
   background: inherit;
 }
 
-.outlined {
-  border: 1px solid black;
-  background: inherit;
-
-  &:hover {
-    box-shadow: 0 0 2px black;
-  }
-}
-
-.primary {
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-
-  &:hover {
-    box-shadow: 0 0 2px var(--primary-color);
-  }
-}
-
-.secondary {
-  border: 1px solid var(--secondary-color);
-  color: var(--secondary-color);
-
-  &:hover {
-    box-shadow: 0 0 2px var(--secondary-color);
-  }
-}
