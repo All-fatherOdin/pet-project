@@ -1,10 +1,16 @@
 {
   "en-GB": {
+    "About": "About",
+    "Load": "Load",
     "Main": "Main",
-    "About": "About"
+    "Page not found": "Page not found",
+    "toggle": "toggle"
   },
   "ru-RU": {
+    "About": "О сайте",
+    "Load": "Load",
     "Main": "Главная",
-    "About": "О сайте"
+    "Page not found": "Страница не найдена",
+    "toggle": "toggle"
   }
 }
