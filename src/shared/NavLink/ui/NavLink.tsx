@@ -1,5 +1,5 @@
 import React from "react"
-import {classNames} from "helpers/classNames/classNames"
+import {classNames} from "shared/lib/classNames/classNames"
 import {Link, type LinkProps, useLocation} from "react-router-dom"
 import classes from "./NavLink.module.scss"
 

@@ -1,5 +1,5 @@
 import React from "react"
-import {classNames} from "helpers/classNames/classNames"
+import {classNames} from "shared/lib/classNames/classNames"
 import classes from "./LocaleSwitcher.module.scss"
 import {Button} from "shared/Button"
 import {Locales, useLocales} from "app/providers/LocalesProvider"
@@ -12,15 +12,15 @@ interface LocaleSwitcherProps {
 
 export function LocaleSwitcher ({className}: LocaleSwitcherProps) {
   const {locale, setLocale} = useLocales()
-
   const toggleLocale = () => {
     setLocale && setLocale(locale === Locales.ENGLISH ? Locales.RUSSIAN : Locales.ENGLISH)
   }
 
   return (
-    <Button onClick={toggleLocale}
+    <Button
+      onClick={toggleLocale}
             className={classNames(classes.LocaleSwitcher, {}, [className])}>
-      <img src={locale === Locales.ENGLISH ? en : ru} className={classes.icon}/>
+        <img src={locale === Locales.ENGLISH ? en : ru} className={classes.icon}/>
     </Button>
   )
 }

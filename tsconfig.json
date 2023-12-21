@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "strict": true,
     "strictNullChecks": true,
-    "baseUrl": "./src",
+    "baseUrl": "./src/",
     "outDir": "./build/",
     "noImplicitAny": true,
     "module": "commonjs",
@@ -12,6 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "types": ["jest"],
     "lib": [
       "ES2018",
       "dom"
@@ -30,5 +32,8 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

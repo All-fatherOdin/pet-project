@@ -1,5 +1,5 @@
 import React from "react"
-import {classNames} from "helpers/classNames/classNames"
+import {classNames} from "shared/lib/classNames/classNames"
 import classes from "./PageError.module.scss"
 import {FormattedMessage} from "react-intl"
 import {Button} from "shared/Button"

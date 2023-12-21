@@ -1,5 +1,5 @@
 import React, {type ButtonHTMLAttributes} from "react"
-import {classNames} from "helpers/classNames/classNames"
+import {classNames} from "shared/lib/classNames/classNames"
 import classes from "./Button.module.scss"
 import {type Color} from "app/providers/ThemeProvider/index"
 import "./Button.scss"

@@ -1,5 +1,5 @@
 import React from "react"
-import {classNames} from "helpers/classNames/classNames"
+import {classNames} from "shared/lib/classNames/classNames"
 import classes from "widgets/PageLoader/ui/PageLoader.module.scss"
 import {Spiner} from "shared/Spiner"
 

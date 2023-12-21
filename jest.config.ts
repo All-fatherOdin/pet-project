@@ -9,25 +9,26 @@ const config: Config = {
   clearMocks: true,
   testEnvironment: "jsdom",
   coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\"
+    "node_modules"
   ],
   moduleDirectories: [
     "node_modules"
   ],
-  moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+  modulePaths: [
+    "<rootDir>src"
   ],
-  rootDir: "../../",
   testMatch: [
     "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
-  ]
+  ],
+  setupFilesAfterEnv: [
+    "<rootDir>config/jest/setupTest.ts"
+  ],
+  moduleNameMapper: {
+    "\\.s?css$": "identity-obj-proxy",
+    "\\.svg": "<rootDir>config/jest/jestEmptyComponent.tsx",
+    "\\.(png|jpg|webp|ttf|woff|woff2|svg|mp4)$": "<rootDir>config/jest/path-to-fileMock.ts"
+  }
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -87,14 +88,15 @@ const config: Config = {
   // A set of global variables that need to be available in all test environments
   // globals: {},
 
-  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
+  // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will
+  // use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
 
-  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with
+  // a single module moduleNameMapper: {},
 
-  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module
+  // loader modulePathIgnorePatterns: [],
 
   // Activates notifications for test results
   // notify: false,
@@ -168,14 +170,11 @@ const config: Config = {
   // A map from regular expressions to paths to transformers
   // transform: undefined,
 
-  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  // transformIgnorePatterns: [
-  //   "\\\\node_modules\\\\",
-  //   "\\.pnp\\.[^\\\\]+$"
-  // ],
+  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip
+  // transformation transformIgnorePatterns: [ "\\\\node_modules\\\\", "\\.pnp\\.[^\\\\]+$" ],
 
-  // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
-  // unmockedModulePathPatterns: undefined,
+  // An array of regexp pattern strings that are matched against all modules before the module loader will
+  // automatically return a mock for them unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
   // verbose: undefined,
