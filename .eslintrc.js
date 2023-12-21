@@ -36,6 +36,7 @@ module.exports = {
             "formatjs/no-offset": "error",
             "max-len": ["error", { ignoreComments: true, code: 120}],
             "formatjs/no-literal-string-in-jsx": ["warn",{
+                
                 exclude: [
                     ["...","message"]
                 ]
@@ -46,6 +47,7 @@ module.exports = {
                 pragma: "React",
                 version: "detect"
             }
-        }
+        },
+        
     }],
 }

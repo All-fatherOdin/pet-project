@@ -1,6 +1,6 @@
 {
   "name": "pet_project",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "scripts": {
     "unit": "jest",
     "start": "webpack serve --env port=3000",

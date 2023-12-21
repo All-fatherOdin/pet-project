@@ -12,7 +12,7 @@ export function Page404 ({className}: Page404Props) {
   return (
     <div className={classNames(classes.Page404, {}, [className])}>
       <h1 className={classNames(classes.title, {}, [classes.text])}>
-         404
+        {intl.formatMessage({id: "404"})}
       </h1>
       <h2 className={classNames(classes.subtitle, {}, [classes.text])}>
         {intl.formatMessage({id: "Page not found"})}
