@@ -12,9 +12,7 @@ root.render(
   <BrowserRouter>
     <LocalesProvider>
       <ThemeProvider>
-        <ErrorBoundary>
-          <App/>
-        </ErrorBoundary>
+        <App/>
       </ThemeProvider>
     </LocalesProvider>
   </BrowserRouter>

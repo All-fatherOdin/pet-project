@@ -1,10 +1,12 @@
 module.exports = {
     root: true,
+
     overrides: [{
         files: ['*.tsx', '*.ts', '*.jsx', '*.js'],
         extends: [
             "standard-with-typescript",
-            "plugin:react/recommended"
+            "plugin:react/recommended",
+            "plugin:storybook/recommended"
         ],
         env: {
             browser: true,
@@ -36,7 +38,6 @@ module.exports = {
             "formatjs/no-offset": "error",
             "max-len": ["error", { ignoreComments: true, code: 120}],
             "formatjs/no-literal-string-in-jsx": ["warn",{
-                
                 exclude: [
                     ["...","message"]
                 ]
@@ -50,4 +51,5 @@ module.exports = {
         },
         
     }],
+    extends: ["plugin:storybook/recommended"]
 }

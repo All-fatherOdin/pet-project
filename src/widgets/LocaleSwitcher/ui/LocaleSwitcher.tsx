@@ -1,7 +1,7 @@
 import React from "react"
 import {classNames} from "shared/lib/classNames/classNames"
 import classes from "./LocaleSwitcher.module.scss"
-import {Button} from "shared/Button"
+import {Button} from "shared/ui/Button"
 import {Locales, useLocales} from "app/providers/LocalesProvider"
 import ru from "shared/assets/icons/ru-RU.png"
 import en from "shared/assets/icons/en-US.png"

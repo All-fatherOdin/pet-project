@@ -1,0 +1,38 @@
+import type {StorybookConfig} from "@storybook/react-webpack5"
+
+const config: StorybookConfig = {
+  stories: ["../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
+    "storybook-css-modules",
+    "@storybook/addon-styling-webpack",
+    "storybook-react-intl"
+  ],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {
+      builder: {
+        useSWC: true
+      }
+    }
+  },
+  swc: () => ({
+    jsc: {
+      transform: {
+        react: {
+          runtime: 'automatic'
+        }
+      }
+    }
+  }),
+  docs: {
+    autodocs: "tag"
+  },
+  typescript: {
+    check: false
+  },
+}
+export default config

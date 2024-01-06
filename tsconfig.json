@@ -33,8 +33,4 @@
       "module": "CommonJS"
     }
   },
-  "exclude": [
-    "./config/jest/setupTest.ts",
-    "./src/**/*.ts?x"
-  ]
 }

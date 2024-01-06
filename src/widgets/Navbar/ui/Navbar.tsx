@@ -1,6 +1,6 @@
 import classes from "./Navbar.module.scss"
 import {classNames} from "shared/lib/classNames/classNames"
-import {NavLink} from "shared/NavLink/ui/NavLink"
+import {NavLink} from "shared/ui/NavLink/ui/NavLink"
 import {FormattedMessage} from "react-intl"
 
 interface NavbarProps {

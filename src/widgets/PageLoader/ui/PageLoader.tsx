@@ -1,7 +1,7 @@
 import React from "react"
 import {classNames} from "shared/lib/classNames/classNames"
 import classes from "widgets/PageLoader/ui/PageLoader.module.scss"
-import {Spiner} from "shared/Spiner"
+import {Spiner} from "shared/ui/Spiner"
 
 interface PageLoaderProps {
   className?: string
