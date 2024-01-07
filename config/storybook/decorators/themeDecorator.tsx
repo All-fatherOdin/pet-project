@@ -1,7 +1,7 @@
-import {StoryObj} from "@storybook/react"
+import {StoryFn} from "@storybook/react"
 import {Theme} from "shared/config/themeConfig/themeConfig"
 
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryObj) => {
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => {
   return (
       <div className={`app ${theme}`}>
         <StoryComponent/>

@@ -1,9 +1,9 @@
-import {Decorator, StoryObj} from "@storybook/react"
+import {StoryFn} from "@storybook/react"
 import React from "react"
 import {BrowserRouter} from "react-router-dom"
 
 
-export const RouterDecorator: Decorator = (StoryComponent: StoryObj) => {
+export const RouterDecorator = (StoryComponent: StoryFn) => {
   return (
     <BrowserRouter>
       <StoryComponent/>
