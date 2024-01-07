@@ -1,8 +1,12 @@
 import type {Preview} from "@storybook/react"
 import "app/styles/index.scss"
-import {StyleDecorator} from "../storybook/styleDecorator"
-import {reactIntl} from './reactIntl';
+import {StyleDecorator} from "./decorators/styleDecorator"
+import {reactIntl} from "./reactIntl"
 import {Locales} from "shared/config/localeConfig/localeConfig"
+import {RouterDecorator} from "./decorators/routerDecorator"
+import {ThemeDecorator} from "./decorators/themeDecorator"
+import {Theme} from "shared/config/themeConfig/themeConfig"
+
 
 const preview: Preview = {
   parameters: {
@@ -17,7 +21,7 @@ const preview: Preview = {
       }
     },
   },
-  decorators: [StyleDecorator],
+  decorators: [StyleDecorator, RouterDecorator, ThemeDecorator(Theme.LIGHT)],
   globals: {
     locale: reactIntl.defaultLocale,
     locales: {
